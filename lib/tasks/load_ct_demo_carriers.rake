@@ -57,5 +57,33 @@ namespace :ct_demo do
         })
       ]
     })
+    ahct_carrier = Carrier.create!({
+      hbx_carrier_id: "20000",
+      name: "Access Health CT",
+      abbrev: "AHCT",
+      carrier_profiles: [
+        CarrierProfile.new({
+          profile_name: "AHCT_IVL",
+          fein: "461542132"
+        }),
+        CarrierProfile.new({
+          profile_name: "AHCT_SHP",
+          fein: "461542132"
+        })
+      ]
+    })
+    ahct_tp = TradingPartner.create!({
+      name: "Access Health CT",
+      trading_profiles: [
+        TradingProfile.new({
+          profile_name: "AHCT_IVL",
+          profile_code: "461542132"
+        }),
+        TradingProfile.new({
+          profile_name: "AHCT_IVL",
+          profile_code: "461542132"
+        })
+      ]
+    })
   end
 end
