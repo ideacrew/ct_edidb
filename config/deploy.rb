@@ -14,9 +14,9 @@ set :ssh_options, {:forward_agent => true}
 set :use_sudo, false
 set :default_shell, "bash -l"
 
-role :web, "172.30.1.39"
-role :app, "172.30.1.39"
-role :db,  "172.30.1.39", :primary => true        # This is where Rails migrations will run
+role :web, "172.30.1.37"
+role :app, "172.30.1.37"
+role :db,  "172.30.1.37", :primary => true        # This is where Rails migrations will run
 
 default_run_options[:pty] = true  # prompt for sudo password, if needed
 after "deploy:restart", "deploy:cleanup_old"  # keep only last 5 releases
